@@ -11,14 +11,14 @@
   --card: hsl(0, 0%, 100%);
   --primary: hsl(222.2, 47.4%, 11.2%);
   --primary-foreground: hsl(210, 40%, 98%);
-  
+
   --spacing-xs: 0.5rem;
   --spacing-sm: 0.75rem;
   --spacing-md: 1rem;
   --spacing-lg: 1.5rem;
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
-  
+
   --font-xs: 0.75rem;
   --font-sm: 0.875rem;
   --font-md: 1rem;
@@ -26,19 +26,19 @@
   --font-xl: 1.5rem;
   --font-2xl: 1.875rem;
   --font-3xl: 2rem;
-  
+
   --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  
+
   --transition: all 0.2s;
 }
 
 body {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #fda085 100%);
   background-size: 400% 400%;
-  font-family: "Inter", "Segoe UI", sans-serif;  
-  text-align: center;    
+  font-family: "Inter", "Segoe UI", sans-serif;
+  text-align: center;
   padding-bottom: 100px;
   min-height: 100vh;
   color: var(--foreground);
@@ -46,10 +46,10 @@ body {
 }
 
 main {
-  display: flex;  
+  display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: var(--spacing-2xl) var(--spacing-md);      
+  padding: var(--spacing-2xl) var(--spacing-md);
 }
 
 .devicon-github-original{
@@ -143,4 +143,44 @@ main {
 
 .container .profile-results.hide {
   display: none;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  background: #fafbfc;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 32px 40px;
+  max-width: 600px;
+  margin: 40px auto 0 auto;
+  gap: 32px;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profile-info h2 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #22223b;
+}
+
+.profile-info p {
+  margin: 0;
+  color: #6c6c80;
+  font-size: 1.1rem;
 }
