@@ -1,4 +1,4 @@
-import { getUser } from "./githubApi.js";
+import { getUser, getRepos } from "./githubApi.js";
 import { renderProfile } from "./renderProfile.js";
 import { showError } from "./showError.js";
 
@@ -18,8 +18,11 @@ btnSearch.addEventListener("click", async () => {
   profileResults.innerHTML = `<p class="loading">Carregando...</p>`;
 
   try {
-    const userData = await getUser(userName);
-    renderProfile(userData, profileResults);
+    const [userData, userRepos] = await Promise.all([
+      getUser(userName),
+      getRepos(userName),
+    ]);
+    renderProfile(userData, userRepos, profileResults);
   } catch (error) {
     showError(error, profileResults);
   }
